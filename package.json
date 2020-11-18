@@ -6,6 +6,7 @@
   "scripts": {
     "build": "node build.js default",
     "build:8bit": "node build.js 8bit",
+    "build:instrument": "node build.js instrument",
     "start": "http-server",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -17,6 +18,7 @@
     "pack2": "git+https://github.com/Royal-Tramp/pack2.git"
   },
   "dependencies": {
+    "@mohayonao/wave-tables": "^0.2.0",
     "ml-savitzky-golay": "^4.1.1"
   }
 }

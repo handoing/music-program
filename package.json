@@ -12,6 +12,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "http-server": "^0.12.3",
     "pack2": "git+https://github.com/Royal-Tramp/pack2.git"
   },
   "dependencies": {

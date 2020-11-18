@@ -1,9 +1,9 @@
-const savitzkyGolay = require('ml-savitzky-golay');
+const savitzkyGolay = require("ml-savitzky-golay");
 
 const audio = new Audio();
 let context, source, analyser;
 
-document.getElementById('load').addEventListener('click', function(e) {
+document.getElementById("load").addEventListener("click", function(e) {
   context = new AudioContext();
   source = context.createMediaElementSource(audio);
   analyser = context.createAnalyser();
@@ -13,23 +13,23 @@ document.getElementById('load').addEventListener('click', function(e) {
 
   audio.src = "http://127.0.0.1:8080/a37e83.mp3";
   audio.addEventListener("canplay", function() {
-    e.target.innerText = 'loaded';
+    e.target.innerText = "loaded";
   });
 });
 
-document.getElementById('play').addEventListener('click', function() {
+document.getElementById("play").addEventListener("click", function() {
   audio.play();
 
   analyser.fftSize = 512;
   const bufferLength = analyser.frequencyBinCount;
   const dataArray = new Uint8Array(bufferLength);
 
-  const canvas = document.getElementById('canvas');
+  const canvas = document.getElementById("canvas");
   const ctx = canvas.getContext("2d");
   const WIDTH = canvas.width;
   const HEIGHT = canvas.height;
 
-  let barWidth = WIDTH / bufferLength * 1.5;
+  let barWidth = (WIDTH / bufferLength) * 1.5;
   let barHeight;
 
   function renderFrame() {
@@ -47,24 +47,23 @@ document.getElementById('play').addEventListener('click', function() {
       x += barWidth + 2;
     }
   }
-  
-  renderFrame();
 
+  renderFrame();
 });
 
-document.getElementById('smooth').addEventListener('click', function() {
+document.getElementById("smooth").addEventListener("click", function() {
   audio.play();
-  
+
   analyser.fftSize = 512;
   const bufferLength = analyser.frequencyBinCount;
   const dataArray = new Uint8Array(bufferLength);
 
-  const canvas = document.getElementById('canvas2');
+  const canvas = document.getElementById("canvas2");
   const ctx = canvas.getContext("2d");
   const WIDTH = canvas.width;
   const HEIGHT = canvas.height;
 
-  let barWidth = WIDTH / bufferLength * 1.5;
+  let barWidth = (WIDTH / bufferLength) * 1.5;
   let barHeight;
 
   function renderFrame() {
@@ -87,7 +86,6 @@ document.getElementById('smooth').addEventListener('click', function() {
       x += barWidth + 2;
     }
   }
-  
-  renderFrame();
 
+  renderFrame();
 });

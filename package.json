@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "node build.js",
+    "build": "node build.js default",
+    "build:8bit": "node build.js 8bit",
     "start": "http-server",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

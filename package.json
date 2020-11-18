@@ -1,0 +1,20 @@
+{
+  "name": "music-program",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "node build.js",
+    "start": "http-server",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "pack2": "git+https://github.com/Royal-Tramp/pack2.git"
+  },
+  "dependencies": {
+    "ml-savitzky-golay": "^4.1.1"
+  }
+}

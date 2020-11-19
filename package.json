@@ -7,6 +7,7 @@
     "build": "node build.js default",
     "build:8bit": "node build.js 8bit",
     "build:instrument": "node build.js instrument",
+    "build:all": "npm run build && npm run build:8bit && npm run build:instrument",
     "start": "http-server",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
